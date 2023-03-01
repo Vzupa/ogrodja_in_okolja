@@ -1,0 +1,2 @@
+export { IgralecInfo } from "./Igralec";
+

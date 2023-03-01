@@ -1,0 +1,1 @@
+export { EkipaInfo } from "./Telo";
