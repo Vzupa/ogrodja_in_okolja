@@ -1,1 +1,0 @@
-export { InfoKomponent } from "./Info";
