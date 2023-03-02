@@ -1,3 +1,3 @@
 export function Noga(): JSX.Element{
-    return <div>Avtor: Vito Zupanič</div>
+    return <div className="footer">Avtor: Vito Zupanič</div>
 }

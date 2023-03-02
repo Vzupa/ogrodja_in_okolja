@@ -14,5 +14,5 @@ export const IgralecInfo: React.FC<Props> = ({ igralec }) => {
             <p>Teza: {igralec.teza} kg</p>
             <p>Poskodovan: {igralec.poskodovan ? 'Da' : 'Ne'}</p>
         </div>
-    )
-}
+    );
+};

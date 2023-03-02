@@ -1,1 +1,1 @@
-export {};
+export { InfoKomponent } from "./Info";

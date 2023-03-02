@@ -1,1 +1,1 @@
-export {};
+export { OpozoriloKomponent } from "./Opozorilo";
