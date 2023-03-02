@@ -1,46 +1,42 @@
-# Getting Started with Create React App
+# Vaje pri projektu Ogrodja in Okolja za Razvoj Spletnih Rešitev (OORSR)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Naloga 1: Pripravite TypeScript aplikacijo, ki bo vključevala dva modula
 
-In the project directory, you can run:
+Modul Oseba, ki uvede tri vmesnike:
 
-### `npm start`
+    Oseba: lastnosti: ime: string, priimek: string, letoRojstva: number in opcijska lastnost krajRojstva: string in id: number. 
+    Igralec: razširi vmesnik Oseba z lastnostmi visina: number, teza: number in poskodovan: boolean. 
+    Funkcionar: razširi vmesnik Oseba z lastnostjo vloga: string in veljavnost: number. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Vmesnika Igralec in Funkcionar izvozite. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Modul Ekipa, v katerem izvozite istoimenski razred Ekipa z lastnostmi: 
 
-### `npm test`
+    ime: string 
+    letoUstanovitve: number 
+    direktor: Funkcionar 
+    trener: Funkcionar 
+    igralci: Igralec[] 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ob tem naj razred vsebuje tudi metode:
 
-### `npm run build`
+    dodajIgralca(igralec: Igralec), ki je tipa void in doda igralca ekipi;
+    posodobiIgralca(igralec: Igralec), ki je tipa void in posodobi igralca glede na id;
+    odstraniIgralca(id: number), ki odstrani igralca glede na podan id;
+    izpisiPodatke(), ki vrne string s podatki o ekipi. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Ne pozabite na constructor(). 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Naloga2: Vzpostavite React TypeScript aplikacijo. Na podlagi aplikacije iz prejšnje naloge pripravite uporabniški vmesnik za pregled ekipe
 
-### `npm run eject`
+- Komponenta Menu, ki vsebuje ime ekipe v komponenti `<h1>`. 
+- Komponenta Telo, ki vsebuje izpis podatkov o ekipi in vseh igralcev, ki so ločene podkomponente (implementirane kot polje komponent). 
+- Komponenta Igralec vsebuje izpis podatkov igralca. Podatke posameznega igralca si izmislite (vsaj en atribut iz naslednjih tipov: boolean, string, number). Vsi igralci imajo lahko zaenkrat enake podatke. 
+- Komponenta Opozorilo, ki se prikaže ko je število igralcev manjše od 11. Komponenta ustrezno obvesti, da ima ekipa premalo igralcev.
+- Komponenta Info, ki se prikaže ko je število igralcev večje ali enako 11. Komponenta obvesti, da ima ekipa dovolj igralcev.
+- Komponenta Noga, ki vsebuje podatke o avtorju spletne strani. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Vse tri komponente dodajte na glavno aplikacijo in jih tudi oblikujte s pomočjo CSS (noga naj bo zmeraj na dnu strani, menu na vrhu, igralci pa naj bodo oblikovani po želji). Podatki so lahko izmišljeni in zaenkrat še ne implementirajo logike s pomočjo funkcij iz prve naloge. 
