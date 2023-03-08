@@ -1,7 +1,9 @@
 # Vaje pri projektu Ogrodja in Okolja za Razvoj Spletnih Rešitev (OORSR)
 
 
-## Naloga 1: Pripravite TypeScript aplikacijo, ki bo vključevala dva modula
+## Naloga 1: TypeScript s ponovitvijo JavaScript
+
+Pripravite TypeScript aplikacijo, ki bo vključevala dva modula
 
 ***Modul Oseba***, ki uvede tri vmesnike:
 
@@ -29,7 +31,9 @@ Ob tem naj razred vsebuje tudi metode:
 Ne pozabite na constructor(). 
 
 
-## Naloga2: Vzpostavite React TypeScript aplikacijo. Na podlagi aplikacije iz prejšnje naloge pripravite uporabniški vmesnik za pregled ekipe
+## Naloga2: Osnove React
+
+Vzpostavite React TypeScript aplikacijo. Na podlagi aplikacije iz prejšnje naloge pripravite uporabniški vmesnik za pregled ekipe
 
 - Komponenta ***Menu***, ki vsebuje ime ekipe v komponenti `<h1>`. 
 - Komponenta ***Telo***, ki vsebuje izpis podatkov o ekipi in vseh igralcev, ki so ločene podkomponente (implementirane kot polje komponent). 
@@ -40,3 +44,17 @@ Ne pozabite na constructor().
 
 
 Vse tri komponente dodajte na glavno aplikacijo in jih tudi oblikujte s pomočjo CSS (noga naj bo zmeraj na dnu strani, menu na vrhu, igralci pa naj bodo oblikovani po želji). Podatki so lahko izmišljeni in zaenkrat še ne implementirajo logike s pomočjo funkcij iz prve naloge. 
+
+## Naloga3: React - nadaljevanje
+
+Prejšnjo nalogo posodobite z uporabo props in state ter react-router. 
+
+1. V komponenti Menu s pomočjo props sprejmite ime ekipe in ga tudi izpišite. 
+
+2. V komponenti Telo s pomočjo props sprejmite ekipo, da lahko izpišete njene podatke. V state hranite seznam vseh igralcev. 
+
+3. V komponenti Igralec s pomočjo props sprejmite igralca, da izpišete njegove podatke. 
+
+4. Ob prvi ekipi ustvarite še drugo in s pomočjo react-router implementirajte prikaz posamezne ekipe glede na njen ID v polju ekip. 
+
+5. Dodajte še eno komponento SeznamEkip, ki jo s pomočjo react-router nastavite kot glavno komponento, ki vsebuje povezave do vseh ekip. 
