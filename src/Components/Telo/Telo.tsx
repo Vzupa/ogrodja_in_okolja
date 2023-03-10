@@ -9,6 +9,9 @@ interface Props {
   }
 
 export const EkipaInfo: React.FC<Props> = ({ ekipa }) => {
+
+    const [igralci, setIgralci] = React.useState(ekipa.igralci);
+
     return (
         <div>
             <p>Leto ustanovitve: {ekipa.letoUsanovitve}</p>
@@ -17,7 +20,7 @@ export const EkipaInfo: React.FC<Props> = ({ ekipa }) => {
             <Informacija />
             <h3>Igralci:</h3>
             <ul>
-                {ekipa.igralci.map((igralec) => (
+                {igralci.map((igralec) => (
                     <IgralecInfo key={igralec.id} igralec={igralec} />
                 ))}
             </ul>

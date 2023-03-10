@@ -1,7 +1,7 @@
 import { Igralec, Funkcionar } from './Oseba';
 import { Ekipa } from './Ekipa';
 
-export const direktor: Funkcionar = {
+ const direktor: Funkcionar = {
   ime: 'Janez',
   priimek: 'Novak',
   letoRojstva: 1980,
@@ -9,7 +9,7 @@ export const direktor: Funkcionar = {
   vloga: 'direktor',
   veljavnost: 3
 };
-export const trener: Funkcionar = {
+ const trener: Funkcionar = {
   ime: 'Ana',
   priimek: 'Kovač',
   letoRojstva: 1985,
@@ -17,7 +17,7 @@ export const trener: Funkcionar = {
   vloga: 'trener',
   veljavnost: 3
 };
-export const igralec1: Igralec = {
+ const igralec1: Igralec = {
   ime: 'Luka',
   priimek: 'Modrić',
   letoRojstva: 1985,
@@ -27,7 +27,7 @@ export const igralec1: Igralec = {
   poskodovan: false
 };
 
-export const igralec2: Igralec = {
+ const igralec2: Igralec = {
   ime: 'Cristiano',
   priimek: 'Ronaldo',
   letoRojstva: 1985,
@@ -37,7 +37,7 @@ export const igralec2: Igralec = {
   poskodovan: false
 };
 
-export const igralec3: Igralec = {
+ const igralec3: Igralec = {
   ime: 'Lionel',
   priimek: 'Messi',
   letoRojstva: 1987,
@@ -47,7 +47,7 @@ export const igralec3: Igralec = {
   poskodovan: true
 };
 
-export const igralec4: Igralec = {
+ const igralec4: Igralec = {
   ime: 'Kevin',
   priimek: 'De Bruyne',
   letoRojstva: 1991,
@@ -57,7 +57,7 @@ export const igralec4: Igralec = {
   poskodovan: false
 };
 
-export const igralec5: Igralec = {
+ const igralec5: Igralec = {
   ime: 'Kylian',
   priimek: 'Mbappe',
   letoRojstva: 1998,
@@ -67,7 +67,7 @@ export const igralec5: Igralec = {
   poskodovan: false
 };
 
-export const igralec6: Igralec = {
+ const igralec6: Igralec = {
   ime: 'Neymar',
   priimek: '',
   letoRojstva: 1992,
@@ -77,7 +77,7 @@ export const igralec6: Igralec = {
   poskodovan: true
 };
 
-export const igralec7: Igralec = {
+ const igralec7: Igralec = {
   ime: 'Mohamed',
   priimek: 'Salah',
   letoRojstva: 1992,
@@ -87,7 +87,7 @@ export const igralec7: Igralec = {
   poskodovan: false
 };
 
-export const igralec8: Igralec = {
+ const igralec8: Igralec = {
   ime: 'Robert',
   priimek: 'Lewandowski',
   letoRojstva: 1988,
@@ -97,7 +97,7 @@ export const igralec8: Igralec = {
   poskodovan: false
 };
 
-export const igralec9: Igralec = {
+ const igralec9: Igralec = {
   ime: 'Harry',
   priimek: 'Kane',
   letoRojstva: 1993,
@@ -107,7 +107,7 @@ export const igralec9: Igralec = {
   poskodovan: false
 };
 
-export const igralec10: Igralec = {
+ const igralec10: Igralec = {
   ime: 'Antoine',
   priimek: 'Griezmann',
   letoRojstva: 1991,
@@ -117,7 +117,7 @@ export const igralec10: Igralec = {
   poskodovan: false
 };
 
-export const igralec11: Igralec = {
+ const igralec11: Igralec = {
   ime: 'Sadio',
   priimek: 'Mane',
   letoRojstva: 1992,
@@ -129,6 +129,7 @@ export const igralec11: Igralec = {
 
 
 export const ekipa = new Ekipa('NK Maribor', 1960, direktor, trener);
+const ekipa2 = new Ekipa('NK Celje', 2022, direktor, trener);
 
 ekipa.dodajIgralca(igralec1);
 ekipa.dodajIgralca(igralec2);
@@ -141,3 +142,13 @@ ekipa.dodajIgralca(igralec8);
 ekipa.dodajIgralca(igralec9);
 ekipa.dodajIgralca(igralec10);
 ekipa.dodajIgralca(igralec11);
+
+ekipa2.dodajIgralca(igralec1);
+ekipa2.dodajIgralca(igralec2);
+
+
+
+
+const ekipe = [ekipa, ekipa2];
+
+export { ekipe };

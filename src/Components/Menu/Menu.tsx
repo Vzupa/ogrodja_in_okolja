@@ -1,5 +1,10 @@
-import { ekipa } from "../../Modules/primer"
-
-export function Menu(){
-    return <h1 className="menu-wrapper">{ekipa.ime}</h1>
-};
+interface Props {
+    ime: string;
+}
+export const Menu: React.FC<Props> = ({ ime }) => {
+    return (
+        <div className="menu">
+            <h1>{ime}</h1>
+        </div>
+    );
+}
