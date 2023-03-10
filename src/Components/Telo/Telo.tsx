@@ -1,14 +1,13 @@
 import React from "react";
 import { Ekipa } from "../../Modules/Ekipa";
 import {Igralec} from "../../Modules/Oseba";
-import {ekipa} from "../../Modules/primer";
 
 
 interface Props {
     ekipa: Ekipa;
   }
 
-export const EkipaInfo: React.FC<Props> = ({ ekipa }) => {
+export const MainKomp: React.FC<Props> = ({ ekipa }) => {
 
     const [igralci, setIgralci] = React.useState(ekipa.igralci);
 
@@ -17,7 +16,7 @@ export const EkipaInfo: React.FC<Props> = ({ ekipa }) => {
             <p>Leto ustanovitve: {ekipa.letoUsanovitve}</p>
             <p>Direktor: {ekipa.direktor.ime} {ekipa.direktor.priimek}</p>
             <p>Trener: {ekipa.trener.ime} {ekipa.trener.priimek}</p>
-            <Informacija />
+            <Informacija ekipa={ekipa}/>
             <h3>Igralci:</h3>
             <ul>
                 {igralci.map((igralec) => (
@@ -35,11 +34,11 @@ interface PropsIgralec {
 const IgralecInfo: React.FC<PropsIgralec> = ({ igralec }) => {
     return (
         <div>
-            <b>{igralec.ime} {igralec.priimek}</b>
-            <p>Leto rojstva: {igralec.letoRojstva}</p>
-            <p>Visina: {igralec.visina} cm</p>
-            <p>Teza: {igralec.teza} kg</p>
-            <p>Poskodovan: {igralec.poskodovan ? 'Da' : 'Ne'}</p>
+            <p>
+                <b>{igralec.ime} {igralec.priimek}: </b>
+                Leto rojstva: {igralec.letoRojstva}, Visina: {igralec.visina} cm,
+                Teza: {igralec.teza} kg, Poskodovan: {igralec.poskodovan ? 'Da' : 'Ne'}
+            </p>
         </div>
     );
 };
@@ -52,7 +51,7 @@ const InfoKomponent = () => {
     );
 };
 
-const OpozoriloKomponent = () => {
+const OpozoriloKomp = () => {
     return (
         <div>
             Ekipa nima dovolj igralcev
@@ -60,8 +59,8 @@ const OpozoriloKomponent = () => {
     );
 };
 
-const Informacija = () => {
+const Informacija: React.FC<Props> = ({ ekipa }) => {
     return (
-        ekipa.igralci.length < 11 ? <OpozoriloKomponent /> : <InfoKomponent />
+        ekipa.igralci.length < 11 ? <OpozoriloKomp /> : <InfoKomponent />
     );
 };

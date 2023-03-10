@@ -1,1 +1,1 @@
-export { EkipaInfo } from "./Telo";
+export { MainKomp } from "./Telo";

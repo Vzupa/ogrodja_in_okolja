@@ -1,6 +1,9 @@
+import React from "react";
+
 interface Props {
     ime: string;
 }
+
 export const Menu: React.FC<Props> = ({ ime }) => {
     return (
         <div className="menu">

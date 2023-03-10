@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import SeznamEkip from "./Components/HomeKomp/SeznamEkip"
-import PrikazEkipe from "./Components/PrikazEkip/PrikazEkipe"
+import { SeznamEkipKomp, PrikazEkipeKomp } from "./Components"
 
 function App() {
   return (
@@ -10,8 +9,8 @@ function App() {
         <BrowserRouter>
             <Routes>
                 {}
-                <Route path="/" element={<SeznamEkip />} />
-                <Route path="/:ime" element={<PrikazEkipe />} />
+                <Route path="/" element={<SeznamEkipKomp />} />
+                <Route path="/:ime" element={<PrikazEkipeKomp />} />
             </Routes>
         </BrowserRouter>
     </div>

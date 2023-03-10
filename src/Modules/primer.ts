@@ -128,7 +128,7 @@ import { Ekipa } from './Ekipa';
 };
 
 
-export const ekipa = new Ekipa('NK Maribor', 1960, direktor, trener);
+const ekipa = new Ekipa('NK Maribor', 1960, direktor, trener);
 const ekipa2 = new Ekipa('NK Celje', 2022, direktor, trener);
 
 ekipa.dodajIgralca(igralec1);

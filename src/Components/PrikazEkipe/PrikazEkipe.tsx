@@ -1,10 +1,10 @@
-import {EkipaInfo} from "../Telo";
+import {MainKomp} from "../Telo";
 import {Menu} from "../Menu";
 import {Noga} from "../Noga";
 import {useParams} from "react-router-dom";
 import {ekipe} from "../../Modules/primer";
 
-const PrikazEkipe = () => {
+export const PrikazEkipeKomp = () => {
     const {ime} = useParams();
 
     const izbranaEkipa = ekipe.find((ekipa) => ekipa.ime === ime);
@@ -16,10 +16,8 @@ const PrikazEkipe = () => {
     return(
         <div>
             <Menu ime={izbranaEkipa.ime}/>
-            <EkipaInfo ekipa={izbranaEkipa} />
+            <MainKomp ekipa={izbranaEkipa} />
             <Noga />
         </div>
     )
-}
-
-export default PrikazEkipe;
+};

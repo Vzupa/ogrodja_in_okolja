@@ -1,0 +1,1 @@
+export { SeznamEkipKomp } from "./SeznamEkipKomp";

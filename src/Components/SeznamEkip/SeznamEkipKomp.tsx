@@ -1,8 +1,8 @@
 import {ekipe} from "../../Modules/primer";
-import useCase from 'react';
 import {Link} from "react-router-dom";
+import {Noga} from "../Noga";
 
-const SeznamEkip = () => {
+export const SeznamEkipKomp = () => {
     return (
         <div>
             <ul>
@@ -15,8 +15,7 @@ const SeznamEkip = () => {
                     ))
                 };
             </ul>
+            <Noga/>
         </div>
     )
-}
-
-export default SeznamEkip
+};

@@ -37,9 +37,8 @@ export class Ekipa {
     }
 
     izpisi(funkcionar: Funkcionar){
-        let podatki = `${funkcionar.ime} ${funkcionar.priimek}, Rojen: ${funkcionar.letoRojstva} ` +
-        `Vloga: ${funkcionar.vloga}, Veljavnost: ${funkcionar.veljavnost}`;
-        return podatki;
+        return `${funkcionar.ime} ${funkcionar.priimek}, Rojen: ${funkcionar.letoRojstva} ` +
+            `Vloga: ${funkcionar.vloga}, Veljavnost: ${funkcionar.veljavnost}`;
     }
 
     izpisiPodatke(){
