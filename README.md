@@ -58,3 +58,11 @@ Prejšnjo nalogo posodobite z uporabo props in state ter react-router.
 4. Ob prvi ekipi ustvarite še drugo in s pomočjo react-router implementirajte prikaz posamezne ekipe glede na njen ID v polju ekip. 
 
 5. Dodajte še eno komponento SeznamEkip, ki jo s pomočjo react-router nastavite kot glavno komponento, ki vsebuje povezave do vseh ekip. 
+
+## Naloga 4: React – napredno
+
+- Na komponenti Telo pripravite podkomponento DodajIgralca, ki naj vsebuje obrazec za dodajanje novega igralca. Ob kliku na gumb za dodajanje kličite funkcijo za dodajanje igralca. 
+
+- Na vrhu telesa dodajte še števec vseh igralcev. Ta se naj posodobi vsakič, ko je dodan nov igralec (pomagajte si z useEffect()).  
+
+- Pripravite še novo podstran (komponenta in uporaba react-router) z obrazcem za dodajanje nove ekipe. 
