@@ -5,13 +5,10 @@ import {useParams} from "react-router-dom";
 import {ekipe} from "../../Modules/primer";
 
 export const PrikazEkipeKomp = () => {
-    const {id} = useParams();
-    let index: number = 0;
-    if (typeof id === "string") {
-        index = parseInt(id, 10);
-    }
+    const {ime} = useParams();
 
-    const izbranaEkipa = ekipe[index];
+    const izbranaEkipa = ekipe.find((ekipa) => ekipa.ime === ime);
+
 
     if (!izbranaEkipa) {
         return <div>Ne najdem ekipe</div>

@@ -8,12 +8,12 @@ export const SeznamEkipKomp = () => {
             <ul>
                 {ekipe.map((ekipa) => (
                     <li>
-                        <Link to={`/${ekipe.indexOf(ekipa)}`} >
+                        <Link to={`/${ekipa.ime}`} >
                             {ekipa.ime}
                         </Link>
                     </li>
                     ))
-                };
+                }
             </ul>
             <Noga/>
         </div>
