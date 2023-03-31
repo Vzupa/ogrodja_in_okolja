@@ -4,13 +4,34 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "./Modules/primer"
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {DodajEkipo, PrikazEkipeKomp} from "./Components";
+import {ekipe1} from "./Modules/primer";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <App /> ,
+        children: [
+            {
+                path: '/ekipa/:ekipaID',
+                element: <PrikazEkipeKomp ekipa={ekipe1}/>
+            },
+            {
+                path: '/dodajEkipo',
+                element: <DodajEkipo />
+            }
+        ]
+    },
+])
+
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}/>
   </React.StrictMode>
 );
 

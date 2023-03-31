@@ -149,6 +149,6 @@ ekipa2.dodajIgralca(igralec2);
 
 
 
-const ekipe = [ekipa, ekipa2];
+const ekipe1 = [ekipa, ekipa2];
 
-export { ekipe };
+export { ekipe1 };
