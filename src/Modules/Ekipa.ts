@@ -19,6 +19,14 @@ export class Ekipa {
         this.igralci.push(igralec);
     }
 
+    dodajFunkcionarja(funkcionar: Funkcionar){
+        if (funkcionar.vloga === 'Direktor'){
+            this.direktor = funkcionar;
+        } else if (funkcionar.vloga === 'Trener'){
+            this.trener = funkcionar;
+        }
+    }
+
     odstraniIgralca(id: number){
         this.igralci = this.igralci.filter((i) => i.id !== id);
     }

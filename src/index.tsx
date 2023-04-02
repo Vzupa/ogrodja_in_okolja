@@ -7,6 +7,8 @@ import "./Modules/primer"
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {DodajEkipo, PrikazEkipeKomp} from "./Components";
 import {ekipe1} from "./Modules/primer";
+import {DodajFunkcionarja} from "./Components/DodajEkipo/DodajEkipo";
+import {findAllByDisplayValue} from "@testing-library/react";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
