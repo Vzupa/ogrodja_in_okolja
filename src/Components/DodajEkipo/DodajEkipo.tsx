@@ -32,9 +32,7 @@ export const DodajEkipo = () => {
 
 
     const dodajEkipo = (ekipa: Ekipa) => {
-        ekipe.push(ekipa);
-        setEkipe(ekipe);
-        console.log(ekipe)
+        setEkipe([...ekipe, ekipa]);
     }
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -47,7 +45,10 @@ export const DodajEkipo = () => {
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        dodajEkipo(ekipa);
+
+        const novaEkipa = new Ekipa(ekipa.ime, ekipa.letoUsanovitve, ekipa.trener, ekipa.direktor);
+
+        dodajEkipo(novaEkipa);
         event.currentTarget.reset();
     }
 

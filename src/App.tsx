@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div>
-        <SeznamEkipKomp />
+        <SeznamEkipKomp ekipe={ekipe} />
         <Link to={"/dodajEkipo"}>
             Dodaj ekipo
         </Link>

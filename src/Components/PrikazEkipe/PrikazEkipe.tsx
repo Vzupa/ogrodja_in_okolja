@@ -4,6 +4,7 @@ import {Noga} from "../Noga";
 import {useParams} from "react-router-dom";
 import {ekipe1} from "../../Modules/primer";
 import {Ekipa} from "../../Modules/Ekipa";
+import {useEkipe} from "../../App";
 
 
 interface Props {
@@ -11,14 +12,16 @@ interface Props {
 }
 
 
-export const PrikazEkipeKomp = (props: Props) => {
+export const PrikazEkipeKomp = () => {
     const {ekipaID} = useParams();
+    const {ekipe, setEkipe} = useEkipe();
+
 
     let izbranaEkipa: Ekipa | undefined;
     let id: number;
     if (typeof ekipaID === "string") {
         id = parseInt(ekipaID);
-        izbranaEkipa = ekipe1[id];
+        izbranaEkipa = ekipe[id];
     }
 
 

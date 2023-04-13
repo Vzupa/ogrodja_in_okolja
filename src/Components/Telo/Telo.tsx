@@ -13,9 +13,10 @@ interface Props {
 export const MainKomp: React.FC<Props> = ({ ekipa}) => {
 
     const {ekipe, setEkipe} = useEkipe();
+    console.log(ekipe);
 
     const dodajIgralca = (igralec: Igralec) => {
-        const updatedEkipa = [...ekipe1];
+        const updatedEkipa = [...ekipe];
         const ekipaToUpdate = updatedEkipa[updatedEkipa.indexOf(ekipa)];
 
         igralec.id = ekipaToUpdate.igralci.length + 2;
